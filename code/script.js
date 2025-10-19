@@ -11,13 +11,19 @@ function throwConfetti() {
 		confetti.style.color = confettiColors[Math.floor(Math.random() * confettiColors.length)];
 		confetti.style.zIndex = 9999;
 		confetti.style.pointerEvents = 'none';
+		confetti.style.transition = 'all ' + (3 + Math.random() * 2) + 's ease-in';
+		confetti.style.opacity = '1';
 		document.body.appendChild(confetti);
-		let fall = setInterval(() => {
-			confetti.style.top = (parseFloat(confetti.style.top) + 0.8) + 'em';
-			if (parseFloat(confetti.style.top) > 30) {
-				confetti.remove();
-				clearInterval(fall);
-			}
-		}, 80);
+		
+		// Trigger smooth fall animation
+		setTimeout(() => {
+			confetti.style.top = '120vh';
+			confetti.style.transform = 'rotate(' + (Math.random() * 360 - 180) + 'deg)';
+		}, 10);
+		
+		// Remove after animation completes
+		setTimeout(() => {
+			confetti.remove();
+		}, 5500);
 	}
 }
