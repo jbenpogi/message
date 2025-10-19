@@ -37,6 +37,11 @@
 		padding: 0 0 20px 0;
 		position: relative;
 	}
+
+	.greeting-container {
+		width: 350px;
+		top: 40%;
+	}
 }
 
 .modal-header {
