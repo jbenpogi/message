@@ -13,11 +13,11 @@ function throwConfetti() {
 		confetti.style.pointerEvents = 'none';
 		document.body.appendChild(confetti);
 		let fall = setInterval(() => {
-			confetti.style.top = (parseFloat(confetti.style.top) + 2) + 'em';
+			confetti.style.top = (parseFloat(confetti.style.top) + 0.8) + 'em';
 			if (parseFloat(confetti.style.top) > 30) {
 				confetti.remove();
 				clearInterval(fall);
 			}
-		}, 50);
+		}, 80);
 	}
 }
