@@ -38,10 +38,6 @@
 		position: relative;
 	}
 
-	.greeting-container {
-		width: 350px;
-		top: 40%;
-	}
 }
 
 .modal-header {
@@ -699,6 +695,8 @@ body {
 	transform: translate(-50%, -50%);
 	margin: 0;
 	box-sizing: border-box;
+	width: 350px;
+		top: 40%;
 }
 
 .greeting-title {
